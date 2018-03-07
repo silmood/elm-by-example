@@ -4,7 +4,7 @@ import Css exposing (..)
 import Html as Html
 import Html.Styled exposing (text, div, h1, img, button, input, video)
 import Html.Styled.Events exposing (onClick, onInput)
-import Html.Styled.Attributes exposing (src, placeholder, id)
+import Html.Styled.Attributes exposing (src, placeholder, id, autoplay)
 import Html.Styled.Attributes exposing (css)
 
 
@@ -50,6 +50,7 @@ view model =
     div []
         [ h1 [] [ text "Request screen sharing with JS" ]
         , video [ id "screen-container"
+                , autoplay True
                 , css
                     [ width (px 800)
                     , height (px 680)
